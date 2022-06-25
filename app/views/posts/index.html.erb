@@ -4,7 +4,7 @@
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "Show this post", post if post.user == current_user%>
     </p>
   <% end %>
 </div>
