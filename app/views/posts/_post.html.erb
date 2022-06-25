@@ -10,7 +10,10 @@
     <strong>Description:</strong>
     <%= post.description %>
   </p>
-  
+
+  <div class="image">
+  <%= link_to image_tag(post.image, style:"width:300px; height:300px"), post.image if post.image.attached? %> 
+
   <% end %>
 
 </div>

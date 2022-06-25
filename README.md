@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+  <div class="form-control">
+    <% if @post.image.attached? %>
+       <%= image_tag @post.image, style: "width: 200px; display: block" %>
+    <% end %>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
